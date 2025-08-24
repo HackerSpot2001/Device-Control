@@ -7,7 +7,6 @@ class UserLoginManager(BaseUserManager):
             raise ValueError("user_login_id must be given.")
 
         user = self.model(user_login_id=user_login_id, **extra_feilds)
-        user.user_id = user.create_user_master()
         user.set_password(password)
         user.save()
         return user

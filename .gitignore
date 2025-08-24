@@ -1,0 +1,7 @@
+venv
+__pycache__
+debug.log
+.env
+django.log
+minio/
+static/
