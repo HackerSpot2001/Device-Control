@@ -15,9 +15,10 @@ class UserLogin(AbstractUser):
     )
     password = models.CharField(max_length=255, null=False, blank=False)
     username = None
-    last_updated_at = models.DateTimeField(auto_now_add=True)
+    email = models.EmailField(max_length=100, unique=True)
+    last_updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
-
+    
     USERNAME_FIELD = "user_login_id"
     REQUIRED_FIELDS = ["password"]
 
