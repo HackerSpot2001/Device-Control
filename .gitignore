@@ -4,4 +4,4 @@ debug.log
 .env
 django.log
 minio/
-static/
+# static/

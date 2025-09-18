@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block htmlcontent %}
+
+<div class="bg-light d-flex align-items-center justify-content-center vh-100">
+
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-5">
+                <section class="card shadow border-0 rounded-3">
+                    <div class="card-body p-4 p-md-5">
+                        <header class="mb-4 text-center">
+                            <h1 class="h3 fw-bold">Login</h1>
+                        </header>
+
+                        <form>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" class="form-control" placeholder="Enter username" required autofocus>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-control"
+                                    placeholder="Enter your password" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                            </div>
+                        </form>
+
+                        <footer class="text-center mt-4">
+                            <p class="mb-0 small">
+                                Don't have an account? <a href="#" class="fw-semibold">Sign Up</a>
+                            </p>
+                        </footer>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock htmlcontent %}

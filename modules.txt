@@ -1,0 +1,17 @@
+Home Page (Dashboard): 
+    Provides an overview of new devices, recent commands, system status, activity, alerts, and scheduled tasks.
+    
+Devices Page: 
+    Manages the list of devices, including search, filter, grouping, and bulk actions.
+
+Device Details Page: 
+    Displays detailed information for an individual device, including overview, command history, performance metrics, scheduled commands, and maintenance logs.
+
+Command Center Page: 
+    A central place to send manual commands, schedule commands, and manage saved command templates.
+
+Notifications Page: 
+    Shows live notifications, critical event logs, and notification settings.
+
+Admin / Settings Page: 
+    Manages user accounts, API keys, and system configurations
