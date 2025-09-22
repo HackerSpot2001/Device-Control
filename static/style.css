@@ -1,0 +1,40 @@
+body {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    top: 56px;
+    /* navbar height */
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    transition: width 0.3s;
+    padding-top: 1rem;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar .list-group-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar.collapsed .list-group-item span {
+    display: none;
+}
+
+.content {
+    margin-left: 250px;
+    transition: margin-left 0.3s;
+    padding: 1rem;
+}
+
+.content.expanded {
+    margin-left: 70px;
+}

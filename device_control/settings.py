@@ -25,6 +25,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Custom Middlewares
+    'device_control.middlewares.TemplateRenderer',
 ]
 
 ROOT_URLCONF = 'device_control.urls'
@@ -40,6 +42,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'device_control.context_processors.custom_context',
             ],
         },
     },
@@ -80,4 +83,69 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Custom Settings
+LOGIN_URL = '/login'
 AUTH_USER_MODEL = "users.UserLogin"
+URL_PAGES = [
+    {
+        "href" : "/",
+        "name" : "Dashboard",
+        "is_menu" : True,
+        "template" : "index.html",
+        "login_required" : True,
+        "classes": "fas fa-tachometer-alt me-3"
+    },
+    {
+        "href" : "/login",
+        "name" : "Login to Device Control",
+        "is_menu" : False,
+        "template" : "login.html",
+        "login_required" : False,
+    },
+    {
+        "href" : "/register",
+        "name" : "Regiter in Device Control",
+        "is_menu" : False,
+        "template" : "register.html",
+        "login_required" : False,
+    },
+    {
+        "href" : "/devices",
+        "name" : "Devices",
+        "is_menu" : True,
+        "template" : "devices.html",
+        "login_required" : True,
+        "classes" : "fas fa-mobile-alt me-3",
+    },
+    {
+        "href" : "/devices-details",
+        "name" : "Devices Details",
+        "is_menu" : False,
+        "template" : "devices-details.html",
+        "login_required" : True,
+        "classes" : "fas fa-mobile-alt me-3",
+    },
+    {
+        "href" : "/cmd-center",
+        "name" : "Command Center",
+        "is_menu" : True,
+        "template" : "commands.html",
+        "login_required" : True,
+        "classes" : "fas fa-terminal me-3",
+    },
+    {
+        "href" : "/admin-settings",
+        "name" : "Admin / Settings",
+        "is_menu" : True,
+        "template" : "admin-page.html",
+        "login_required" : True,
+        "classes" : "fas fa-gear me-3",
+    },
+    {
+        "href" : "/logout",
+        "name" : "Logout",
+        "is_menu" : True,
+        "template" : "N/A",
+        "login_required" : True,
+        "classes" : "fas fa-sign-out-alt me-3",
+    },
+]
